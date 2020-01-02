@@ -26,3 +26,4 @@ include $(BASE_PATH)/SetupWizard/Android.mk
 include $(BASE_PATH)/ConfigurationClient/Android.mk
 include $(BASE_PATH)/OmaDownload/Android.mk
 include $(BASE_PATH)/OmaDrmEngine/Android.mk
+include $(BASE_PATH)/BootAnimation/Android.mk
