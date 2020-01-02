@@ -1245,6 +1245,10 @@ MM_CAMERA += libmmcamera_ar0542
 MM_CAMERA += libmmcamera_common_ar0542_eeprom
 endif
 
+MM_CAMERA += libmmcamera_gc5024
+MM_CAMERA += libchromatix_gc5024_common
+MM_CAMERA += libchromatix_gc5024_preview
+
 MM_CAMERA += libmmcamera
 MM_CAMERA += libmmcamera_cac_lib
 MM_CAMERA += libmmcamera_cac2_lib

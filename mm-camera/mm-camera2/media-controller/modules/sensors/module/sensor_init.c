@@ -48,9 +48,8 @@
 #endif
 
 static const char *sensor_libs[] = {
-// "hi259",
+  "gc5024",
 // "hi843_8909",
-   "ov5675_d5v15b",
 };
 
 /** sensor_init_probe: probe available sensors
