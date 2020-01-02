@@ -68,7 +68,7 @@
 static sensor_lib_t sensor_lib_ptr;
 
 static struct msm_sensor_power_setting power_setting[] = {
-	{
+	/*{
 		.seq_type = SENSOR_GPIO,
 		.seq_val = SENSOR_GPIO_STANDBY,
 		.config_val = GPIO_OUT_HIGH,
@@ -79,42 +79,60 @@ static struct msm_sensor_power_setting power_setting[] = {
 		.seq_val = SENSOR_GPIO_RESET,
 		.config_val = GPIO_OUT_LOW,
 		.delay = 10,
-	},
+	},*/
 	{
 		.seq_type = SENSOR_VREG,
 		.seq_val = CAM_VIO,
-		.config_val = 0,
-		.delay = 10,
+		.config_val = GPIO_OUT_HIGH,
+		.delay = 5,
 	},
     {
         .seq_type = SENSOR_GPIO,
         .seq_val = SENSOR_GPIO_VDIG,
+        .config_val = GPIO_OUT_LOW,
+        .delay = 1,
+    },
+     {
+        .seq_type = SENSOR_GPIO,
+        .seq_val = SENSOR_GPIO_VDIG,
         .config_val = GPIO_OUT_HIGH,
-        .delay = 10,
+        .delay = 4,
     },
 	{
 		.seq_type = SENSOR_VREG,
 		.seq_val = CAM_VANA,
-		.config_val = 0,
-		.delay = 10,
+		.config_val = GPIO_OUT_LOW,
+		.delay = 1,
 	},
+    {
+		.seq_type = SENSOR_VREG,
+		.seq_val = CAM_VANA,
+		.config_val = GPIO_OUT_HIGH,
+		.delay = 3.5,
+	},
+	// 	{
+	// 	.seq_type = SENSOR_CLK,
+	// 	.seq_val = SENSOR_CAM_MCLK,
+	// 	.config_val = 0,
+	// 	.delay = 14.5,
+	// },
 	{
 		.seq_type = SENSOR_CLK,
 		.seq_val = SENSOR_CAM_MCLK,
 		.config_val = 24000000,
-		.delay = 5,
+		.delay = 1,
 	},
 	{
 		.seq_type = SENSOR_GPIO,
 		.seq_val = SENSOR_GPIO_STANDBY,
-		.config_val = GPIO_OUT_LOW, 
-		.delay = 10,
+		.config_val = GPIO_OUT_HIGH, 
+		.delay = 1,
 	},
 	{
 		.seq_type = SENSOR_GPIO,
 		.seq_val = SENSOR_GPIO_RESET,
-		.config_val = GPIO_OUT_HIGH,
-		.delay = 10,
+		.config_val = GPIO_OUT_LOW,
+		.delay = 1,
 	},
 	{
 		.seq_type = SENSOR_I2C_MUX,
@@ -123,12 +141,12 @@ static struct msm_sensor_power_setting power_setting[] = {
 		.delay = 0,
 	},
 
-    {
-        .seq_type = SENSOR_GPIO,
-        .seq_val = SENSOR_GPIO_VAF,
-        .config_val = GPIO_OUT_HIGH,
-        .delay = 10,
-    },
+    // {
+    //     .seq_type = SENSOR_GPIO,
+    //     .seq_val = SENSOR_GPIO_VAF,
+    //     .config_val = GPIO_OUT_HIGH,
+    //     .delay = 10,
+    // },
 	
 };
 
